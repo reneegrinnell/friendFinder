@@ -1,7 +1,5 @@
 // DEPENDENCIES
 var express = require("express");
-
-//instructions said to use this too...?
 var path = require("path");
 
 // EXPRESS SERVER CONFIGURATION
@@ -20,5 +18,5 @@ require(path.join(__dirname, "./app/routing/htmlRoutes"))(app);
 
 // LISTENER
 app.listen(PORT, function() {
-  console.log("Wizard Friend Finder is listening on PORT: " + PORT);
+  console.log("Wizard Friend Finder is listening on PORT # " + PORT);
 });

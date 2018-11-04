@@ -13,6 +13,8 @@
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Wizard Friend Finder</title>
 </head>
@@ -183,7 +185,7 @@
             </div>
         </footer>
 
-<!-- Modal Dialog Displaying Closest Friend Match -->
+<!-- Modal dialog w/closest wizard friend match! -->
 <div id="modal1" class="modal">
 		<div class="modal-content">
 			<h4>Closest Friend Match</h4>
@@ -198,8 +200,8 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$('select').material_select();
-			$('.modal').modal({
+			$("select").material_select();
+			$(".modal").modal({
 				// dismissible: false, // Modal can be dismissed by clicking outside of the modal
 				// opacity: .5, // Opacity of modal background
 				// inDuration: 300, // Transition in duration
@@ -213,19 +215,19 @@
 			event.preventDefault();
 			// Gather user inputs
 			var userInput = {
-				name: $('#userName').val().trim(),
-				photo: $('#userPhoto').val().trim(),
+				name: $("#userName").val().trim(),
+				photo: $("#userPhoto").val().trim(),
 				scores:[
-					$('#question1').val().trim(),
-					$('#question2').val().trim(),
-					$('#question3').val().trim(),
-					$('#question4').val().trim(),
-					$('#question5').val().trim(),
-					$('#question6').val().trim(),
-					$('#question7').val().trim(),
-					$('#question8').val().trim(),
-					$('#question9').val().trim(),
-					$('#question10').val().trim()
+					$("#question1").val().trim(),
+					$("#question2").val().trim(),
+					$("#question3").val().trim(),
+					$("#question5").val().trim(),
+					$("#question4").val().trim(),
+					$("#question6").val().trim(),
+					$("#question7").val().trim(),
+					$("#question8").val().trim(),
+					$("#question9").val().trim(),
+					$("#question10").val().trim()
 				]
             };
             
@@ -234,10 +236,10 @@
       		.done(function(data) {
       			// console.log('response = ' + JSON.stringify(data));
       			// Set the name and image values of friend match
-      			$('#userMatch').html(data.matchName);
+      			$("#userMatch").html(data.matchName);
 		    	$("#userMatchImage").attr("src", data.matchImage);
 		    	// Pop open the modal dialog
-      			$('#modal1').modal('open');
+      			$("#modal1").modal("open");
       		});
 		});
 	</script>
