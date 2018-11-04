@@ -5,38 +5,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Wizard Friend Finder</title>
 </head>
 
 <body>
 
     <div class="container">
-
         <div class="jumbotron">
             <h1 class="text-center"><span class="fa fa-hat-wizard"></span> Wizard Friend Finder 1.0</h1>
             <hr>
             <h2 class="text-center">Take the survey to find your closest magical match!</h2>
             <br>
-
-            <div class="text-center">
-                <a href="/survey"><button class="btn btn-lg btn-primary">
-                <span class="fa fa-magic"></span> Accio Survey!</button></a>
-            </div>
-
         </div>
 
+        <h5>About You:</h5>
+
+        <div class="input-field">
+            <h5>Name (Required)</h5>
+            <i class="fas fa-file-signature"></i>
+            <input type="text" class="validate" placeholder="Jane Muggle" id="userName">
+        </div>
+
+        <div class="input-field">
+            <h5>Link to Your Photo (Required)</h5>
+            <i class="fas fa-image"></i>
+            <input type="text" class="validate" placeholder="Muggle mug link" id="userPhoto">
+        </div>
+
+        <hr>
+
+        <!-- Wizard Friend Finder survey questions -->
+        <h5>Survey Questions:</h5>
+        <div class="input-field">
+            <h5>1. You think Professor Sybill Trelawney is an underrated genius.</h5>
+            <select id="question1">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <h5>2. In your opinion, Hagrid does not belong anywhere near Hogwarts grounds.</h5>
+            <select id="question2">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <h5>3. Your friends would describe you as someone who goes looking for trouble.</h5>
+            <select id="question3">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>4. It's such a shame that Hogwarts limits the number of classes students may take each term.</h5>
+            <select id="question4">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>5. You love playing and/or spectating Quidditch matches.</h5>
+            <select id="question5">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>6. People frequently describe you as serious and strict.</h5>
+            <select id="question6">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>7. You live for summer vacation at home with loved ones.</h5>
+            <select id="question7">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>8. As a young person, you were frequently bullied.</h5>
+            <select id="question8">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>9<sup>3</sup>&frasl;<sub>4</sub>. You are noticeably more cautious than others your age.</h5>
+            <select id="question9">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div class="input-field ">
+            <h5>10. You feel overlooked in your family from time to time.</h5>
+            <select id="question10">
+                <option value="" disabled selected>Pick your poison!</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <div>
+            <button class="btn btn-lg btn-primary" type="submit" name="action" id="submitButton">
+                <i class="fas fa-feather"></i> Submit
+            </button>
+        </div>
+
+        <hr>
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="/survey">Survey</a> 
+                    <a href="/">Home</a>
                     <i class="fa fa-bolt"></i> <a href="/api/friends">API Wizard Friend List</a>
                     <i class="fa fa-bolt"></i> <a href="https://github.com/reneegrinnell/friendFinder">GitHub Repo</a>
                     <br>&copy; Renée Grinnell 2018
@@ -44,8 +183,64 @@
             </div>
         </footer>
 
-    </div>
+<!-- Modal Dialog Displaying Closest Friend Match -->
+<div id="modal1" class="modal">
+		<div class="modal-content">
+			<h4>Closest Friend Match</h4>
+			<div class="divider"></div>
+			<h5 id="userMatch"></h5>
+			<img id="userMatchImage" class="materialboxed" width="650" src="">
+		</div>
+		<div class="modal-footer">
+			<a href="/survey" class="modal-action modal-close waves-effect waves-green btn-flat">Fill Again!</a>
+		</div>
+	</div>
 
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').material_select();
+			$('.modal').modal({
+				// dismissible: false, // Modal can be dismissed by clicking outside of the modal
+				// opacity: .5, // Opacity of modal background
+				// inDuration: 300, // Transition in duration
+				// outDuration: 200, // Transition out duration
+				// startingTop: '4%', // Starting top style attribute
+				// endingTop: '10%' // Ending top style attribute
+			});
+		});
+		// Activate submit button
+		$('#submitButton').on('click', function(event) {
+			event.preventDefault();
+			// Gather user inputs
+			var userInput = {
+				name: $('#userName').val().trim(),
+				photo: $('#userPhoto').val().trim(),
+				scores:[
+					$('#question1').val().trim(),
+					$('#question2').val().trim(),
+					$('#question3').val().trim(),
+					$('#question4').val().trim(),
+					$('#question5').val().trim(),
+					$('#question6').val().trim(),
+					$('#question7').val().trim(),
+					$('#question8').val().trim(),
+					$('#question9').val().trim(),
+					$('#question10').val().trim()
+				]
+            };
+            
+			// Add user inputs to friends list
+			$.post("/api/friends", userInput)
+      		.done(function(data) {
+      			// console.log('response = ' + JSON.stringify(data));
+      			// Set the name and image values of friend match
+      			$('#userMatch').html(data.matchName);
+		    	$("#userMatchImage").attr("src", data.matchImage);
+		    	// Pop open the modal dialog
+      			$('#modal1').modal('open');
+      		});
+		});
+	</script>
 </body>
 
 </html>
