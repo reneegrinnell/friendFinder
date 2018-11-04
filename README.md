@@ -1,1 +1,1 @@
-# friendFinder
+# Wizard Friend Finder
